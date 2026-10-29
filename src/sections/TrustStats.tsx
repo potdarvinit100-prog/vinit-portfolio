@@ -13,7 +13,7 @@ export default function TrustStats() {
             <dd className="text-white/60 text-sm mt-1">websites built</dd>
           </div>
           <div className="text-center md:text-left">
-            <dd className="font-display text-3xl font-extrabold text-white">YC-backed</dd>
+            <dd className="font-display text-3xl font-extrabold text-white">VAYN</dd>
             <dd className="text-white/60 text-sm mt-1">startup founder</dd>
           </div>
           <div className="text-center md:text-left">
