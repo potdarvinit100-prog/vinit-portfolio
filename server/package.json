@@ -1,0 +1,1 @@
+{"dependencies":{"cors":"^2.8.5","dotenv":"^16.4.5","express":"^4.19.2","mongoose":"^8.5.0"},"description":"Backend API for Vinit's portfolio site: project inquiries, health check, chat placeholder.","license":"UNLICENSED","main":"src/index.js","name":"vinit-portfolio-server","scripts":{"dev":"node --watch src/index.js","start":"node src/index.js"},"version":"1.0.0"}

@@ -1,0 +1,175 @@
+/* OPUL animation kit — dark-luxury motion system for the VAYN freelance portfolio.
+   Import once in main.tsx:  import "./opul/opul.css";
+   All motion uses one soft ease + slow durations. Nothing bounces. */
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap");
+
+:root {
+  --opul-bg: #0a0a0a;
+  --opul-ink: #f5f0e6;
+  --opul-ink-dim: rgba(245, 240, 230, 0.62);
+  --opul-ink-faint: rgba(245, 240, 230, 0.34);
+  --opul-champagne: #d8c39a;
+  --opul-hairline: rgba(245, 240, 230, 0.14);
+  --opul-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.opul-serif {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+/* tiny uppercase wide-tracked label */
+.opul-micro {
+  font-size: 11px;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: var(--opul-ink-faint);
+  font-weight: 400;
+}
+.opul-micro b {
+  color: var(--opul-champagne);
+  font-weight: 500;
+}
+
+/* radial spotlight glow behind imagery */
+.opul-spotlight {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse 46% 36% at 50% 32%,
+    rgba(216, 195, 154, 0.2),
+    rgba(216, 195, 154, 0.05) 55%,
+    transparent 72%
+  );
+}
+.opul-beam {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 42%;
+  background: linear-gradient(to bottom, rgba(216, 195, 154, 0.5), transparent);
+  filter: blur(1px);
+  pointer-events: none;
+}
+
+/* line-mask headline: wrap each line in .opul-mask > .opul-mask-inner */
+.opul-mask {
+  display: block;
+  overflow: hidden;
+}
+.opul-mask-inner {
+  display: block;
+  will-change: transform;
+}
+
+/* hairline section divider */
+.opul-rule {
+  border: 0;
+  border-top: 1px solid var(--opul-hairline);
+}
+
+/* scroll cue at hero base */
+.opul-cue-line {
+  width: 1px;
+  height: 56px;
+  background: rgba(245, 240, 230, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+.opul-cue-line::after {
+  content: "";
+  position: absolute;
+  top: -40%;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: var(--opul-champagne);
+  animation: opul-cue 2.2s var(--opul-ease) infinite;
+}
+@keyframes opul-cue {
+  to {
+    top: 110%;
+  }
+}
+
+/* outline-to-fill pill button */
+.opul-btn {
+  font-size: 12px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  padding: 17px 34px 17px 38px;
+  border: 1px solid rgba(245, 240, 230, 0.35);
+  border-radius: 999px;
+  color: var(--opul-ink);
+  background: transparent;
+  cursor: pointer;
+  font-family: inherit;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transition: color 0.45s var(--opul-ease), border-color 0.45s var(--opul-ease);
+  text-decoration: none;
+  display: inline-block;
+}
+.opul-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--opul-ink);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.45s var(--opul-ease);
+  z-index: -1;
+}
+.opul-btn:hover {
+  color: #0a0a0a;
+  border-color: var(--opul-ink);
+}
+.opul-btn:hover::before {
+  transform: scaleX(1);
+}
+.opul-btn--solid {
+  background: var(--opul-ink);
+  color: #0a0a0a;
+}
+.opul-btn--solid::before {
+  background: var(--opul-champagne);
+}
+.opul-btn--solid:hover {
+  border-color: var(--opul-champagne);
+}
+
+/* filter pills */
+.opul-pill {
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  padding: 12px 24px;
+  border: 1px solid var(--opul-hairline);
+  border-radius: 999px;
+  color: var(--opul-ink-dim);
+  background: transparent;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.4s var(--opul-ease);
+}
+.opul-pill:hover {
+  border-color: rgba(245, 240, 230, 0.4);
+  color: var(--opul-ink);
+}
+.opul-pill--on {
+  background: var(--opul-ink);
+  color: #0a0a0a;
+  border-color: var(--opul-ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .opul-cue-line::after {
+    animation: none;
+  }
+}

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0a0a10"/>
+  <circle cx="180" cy="120" r="3" fill="#c6ff3d" opacity="0.6"/>
+  <circle cx="1040" cy="200" r="2.5" fill="#8b5cf6" opacity="0.7"/>
+  <circle cx="960" cy="520" r="3" fill="#c6ff3d" opacity="0.4"/>
+  <circle cx="260" cy="520" r="2.5" fill="#8b5cf6" opacity="0.5"/>
+  <text x="600" y="290" font-family="Syne, Arial, sans-serif" font-size="96" font-weight="800" fill="#ffffff" text-anchor="middle">VINIT POTDAR</text>
+  <text x="600" y="370" font-family="'Space Grotesk', Arial, sans-serif" font-size="34" fill="#c6ff3d" text-anchor="middle">Websites • AI • Automation</text>
+</svg>
