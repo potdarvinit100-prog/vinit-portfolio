@@ -1,6 +1,6 @@
 export const SITE = {
   name: 'Vinit Potdar',
-  role: 'Freelance Web Developer',
+  role: 'Web Developer',
   phoneDisplay: '+91 82629 20550',
   phoneHref: 'tel:+918262920550',
   whatsapp: 'https://wa.me/918262920550',

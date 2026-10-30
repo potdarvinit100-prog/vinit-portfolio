@@ -145,7 +145,7 @@ export default function Hero() {
           </div>
 
           <p className="text-lime text-sm font-semibold tracking-[0.3em] uppercase mb-5">
-            Freelance Web Developer
+            Web Developer
           </p>
           <h1 className="font-display text-5xl md:text-7xl font-extrabold leading-[1.05] max-w-4xl mb-6">
             Your Business Deserves More Than Just a{' '}
